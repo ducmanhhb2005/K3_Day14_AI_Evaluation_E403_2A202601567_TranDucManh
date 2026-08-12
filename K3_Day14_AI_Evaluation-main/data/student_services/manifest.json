@@ -1,0 +1,84 @@
+{
+  "corpus_id": "northstar-student-services-v1",
+  "title": "Northstar University Student Services",
+  "organization": "Northstar University",
+  "language": "en",
+  "version": "1.0",
+  "default_effective_date": "2026-08-01",
+  "fictional": true,
+  "source_of_truth_notice": "This corpus is synthetic. For this lab, these documents are the only source of truth.",
+  "documents": [
+    {
+      "doc_id": "NU-00",
+      "path": "00_system_scope.md",
+      "title": "Student Services Assistant Scope and Safety",
+      "use_cases": ["scope", "out_of_scope", "prompt_injection", "privacy"]
+    },
+    {
+      "doc_id": "NU-01",
+      "path": "01_academic_calendar.md",
+      "title": "Academic Calendar and Deadlines",
+      "use_cases": ["calendar", "deadlines", "effective_dates"]
+    },
+    {
+      "doc_id": "NU-02",
+      "path": "02_course_registration.md",
+      "title": "Course Registration and Prerequisites",
+      "use_cases": ["registration", "prerequisites", "add_drop"]
+    },
+    {
+      "doc_id": "NU-03",
+      "path": "03_tuition_payment_refund.md",
+      "title": "Tuition, Payment, and Refunds",
+      "use_cases": ["tuition", "payment", "refunds", "financial_holds"]
+    },
+    {
+      "doc_id": "NU-04",
+      "path": "04_scholarships.md",
+      "title": "Scholarship Eligibility and Renewal",
+      "use_cases": ["scholarships", "eligibility", "academic_progress"]
+    },
+    {
+      "doc_id": "NU-05",
+      "path": "05_attendance_and_grading.md",
+      "title": "Attendance, Assessment, and Grading",
+      "use_cases": ["attendance", "grading", "incomplete_grades"]
+    },
+    {
+      "doc_id": "NU-06",
+      "path": "06_leave_and_withdrawal.md",
+      "title": "Leave of Absence and Withdrawal",
+      "use_cases": ["leave", "withdrawal", "medical_exceptions"]
+    },
+    {
+      "doc_id": "NU-07",
+      "path": "07_graduation_and_internship.md",
+      "title": "Graduation and Internship Requirements",
+      "use_cases": ["graduation", "internship", "degree_audit"]
+    },
+    {
+      "doc_id": "NU-08",
+      "path": "08_student_support_and_appeals.md",
+      "title": "Student Support, Complaints, and Appeals",
+      "use_cases": ["support", "appeals", "complaints", "accessibility"]
+    },
+    {
+      "doc_id": "NU-09",
+      "path": "09_privacy_security_and_policy_updates.md",
+      "title": "Privacy, Account Security, and Policy Updates",
+      "use_cases": ["privacy", "security", "policy_versions", "escalation"]
+    }
+  ],
+  "required_use_cases": [
+    "scope",
+    "calendar",
+    "registration",
+    "tuition",
+    "scholarships",
+    "grading",
+    "leave",
+    "graduation",
+    "appeals",
+    "security"
+  ]
+}
