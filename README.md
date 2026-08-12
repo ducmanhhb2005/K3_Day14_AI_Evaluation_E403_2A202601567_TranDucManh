@@ -30,6 +30,29 @@ cp .env.example .env                     # rồi điền OPENAI_API_KEY (chỉ c
 
 Chi tiết đầy đủ theo hệ điều hành, xử lý lỗi thường gặp: xem [`guide_lab.md`](guide_lab.md) Mục 2 và Mục 15.
 
+### UI demo end-to-end
+
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run ui_app.py
+```
+
+UI **Northstar Evaluation Command Center** gồm Overview, cấu hình/chạy OpenAI
+thật, Results dashboard, Failure Lab, Trace Explorer và Golden Dataset Studio.
+API key được nhập bằng password field cho từng runtime và không được ghi vào
+source hay artifact. UI chỉ hiển thị benchmark metrics sau khi đủ 20 actual
+answers đã được model thật sinh thành công; nếu API lỗi, run dừng và không tạo
+kết quả giả. Xem kịch bản trình bày trong [`DEMO_GUIDE.md`](DEMO_GUIDE.md).
+
+Sau live run, UI tự động cập nhật Exercise 3.2, bonus reranking và
+`reflection.md` từ artifact thật. Nếu chạy bằng CLI, dùng:
+
+```bash
+python domain_assistant.py
+python evaluate_answers.py
+python populate_live_reports.py
+```
+
 ---
 
 ## Mục tiêu

@@ -16,7 +16,7 @@ import time
 from collections import Counter
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass, replace
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Protocol
 
@@ -455,7 +455,7 @@ def generate_actual_answers(
     return {
         "schema_version": "1.0",
         "corpus_id": assistant.corpus_id,
-        "generated_at": datetime.now(UTC).isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "agent": {
             "name": "domain-assistant",
             "model": model,
